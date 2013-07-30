@@ -600,6 +600,9 @@ namespace Walker.Service
                 _activity = new Walk();
                 _activity.Start = DateTime.Now;
                 activityBegin = _CurrentGeoCoordinate;
+                
+                Geos = new List<GeoCoordinate>();   // clear Geos list as we're starting a new activity track.
+                Geos.Add(_CurrentGeoCoordinate);    // Begin activity with current location. 
             }
         }
 
